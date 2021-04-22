@@ -1,0 +1,111 @@
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 0.8;
+    margin: 10% auto 10% 10%;
+}
+
+.left-container .text-container h1 {
+    font-size: 4rem;
+}
+
+.left-container .btn-container button {
+    font-size: 1rem;
+    border: 1px solid black;
+    background-color: transparent;
+    padding: 2% 8% 2% 8%;
+    border-radius: 4rem;
+    cursor: pointer;
+}
+
+.right-container {
+    flex: 1;
+    display: flex;
+}
+.grid-container {
+    flex: 1;
+    margin: 20% 20% 20% 20%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(4rem, 1fr));
+    grid-template-rows: repeat(3, minmax(4rem, 1fr));
+}
+
+.btn-container {
+    transition: all 0.2s ease;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid black;
+    font-size: 5rem;
+}
+
+.cell1,
+.cell4,
+.cell7 {
+    border-left: none;
+}
+
+.cell3,
+.cell6,
+.cell9 {
+    border-right: none;
+}
+
+.cell1,
+.cell2,
+.cell3 {
+    border-top: none;
+}
+
+.cell7,
+.cell8,
+.cell9 {
+    border-bottom: none;
+}
+
+.turns-text {
+    transition: all 0.2s ease;
+}
+
+.winner-text {
+    transition: all 0.2s ease;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    cursor: none;
+}
+
+.symbol {
+    transition: all 0.2s ease;
+}
+.welcome-text {
+    transition: all 0.2s ease;
+}
+
+.left-container .btn-container button.warning {
+    animation: triggerColor 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes triggerColor {
+    from {
+        border-color: black;
+        color: black;
+    }
+    to {
+        border-color: red;
+        color: red;
+    }
+}
